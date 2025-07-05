@@ -1,0 +1,13 @@
+:root{
+
+    --primary-color: #3a7bd6;
+
+}
+
+.btn-primary{
+    background-color: var(--primary-color) !important;
+}
+
+.active {
+    color: var(--primary-color) !important;
+}
