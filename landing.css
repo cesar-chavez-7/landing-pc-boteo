@@ -20,3 +20,9 @@
 .active {
     color: var(--primary-color) !important;
 }
+
+.card-img{
+    height: 15rem;
+    object-fit: cover;
+    object-position: center;
+}
