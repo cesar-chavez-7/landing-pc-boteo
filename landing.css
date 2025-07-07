@@ -9,8 +9,12 @@
     background-color: var(--primary-color) !important;
 }
 
+.bg-primary{
+    background-color: var(--primary-color) !important;   
+}
+
 .bg-secondary{
- background-color: var(--secondary-color) !important;
+    background-color: var(--secondary-color) !important;
 }
 
 .text-primary{
@@ -26,3 +30,4 @@
     object-fit: cover;
     object-position: center;
 }
+
