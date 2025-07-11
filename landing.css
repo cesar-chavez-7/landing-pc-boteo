@@ -31,3 +31,9 @@
     object-position: center;
 }
 
+.hero{
+    height: 39rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
