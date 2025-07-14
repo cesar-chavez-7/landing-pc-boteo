@@ -26,7 +26,7 @@
 }
 
 .card-img{
-    height: 15rem;
+    height: 13rem;
     object-fit: cover;
     object-position: center;
 }
@@ -37,3 +37,114 @@
     background-size: cover;
     background-position: center center;
 }
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr)); /* 220px */
+  gap: 1.5rem; /* 24px */
+  margin: 2rem; /* 32px */
+}
+
+.productos-scroll {
+  display: flex;
+  gap: 1.5rem; /* 16px */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem; /* 16px */
+}
+
+.productos-scroll::-webkit-scrollbar {
+  height: 0.5rem; /* 8px */
+}
+
+.productos-scroll::-webkit-scrollbar-thumb {
+  background: #0d6efd; /* Bootstrap primary */
+  border-radius: 0.25rem; /* 4px */
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 15rem; /* 240px */
+  border-radius: 0.5rem; /* 8px */
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px 8px */
+  scroll-snap-align: start;
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.3125rem); /* -5px */
+}
+
+.card-img {
+  width: 100%;
+  height: 13rem; /* 176px */
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem; /* 16px */
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* más visible en blanco */
+  height: 9rem; /* 144px */
+  overflow: hidden;
+}
+
+/* etiquetas */
+.product-label {
+  font-size: 0.8rem; /* 12.8px */
+}
+
+.card-title-size {
+  font-size: 1rem; /* 16px */
+  margin-bottom: 0.5rem; /* 8px, simulando .card-title de bootstrap */
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.productos-container {
+  position: relative;
+}
+
+.scroll-btn {
+  background: var(--primary-color); /* fondo azul para los botones */
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background 0.3s, color 0.3s;
+}
+
+.scroll-btn:disabled {
+  background: #aaa;  /* fondo gris para botones deshabilitados */
+  color: #eee;
+  cursor: default;
+}
+
+.scroll-btn.left {
+  left: 0.5rem;
+}
+
+.scroll-btn.right {
+  right: 0.5rem;
+}
+
+.productos-scroll {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE y Edge */
+}
+
+.productos-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Opera */
+}
+
