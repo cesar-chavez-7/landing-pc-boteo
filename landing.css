@@ -104,47 +104,83 @@
 
 .productos-container {
   position: relative;
+  padding-bottom: 3.5rem; /* espacio para botones abajo en móvil */
 }
 
 .scroll-btn {
-  background: var(--primary-color); /* fondo azul para los botones */
+  background: var(--primary-color);
   border-radius: 50%;
   border: none;
   color: #fff;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
   transition: background 0.3s, color 0.3s;
+  z-index: 10;
 }
 
+/* Botones deshabilitados */
 .scroll-btn:disabled {
-  background: #aaa;  /* fondo gris para botones deshabilitados */
+  background: #aaa;
   color: #eee;
   cursor: default;
 }
 
-.scroll-btn.left {
-  left: 0.5rem;
+/* Estilos para pantallas grandes (md en adelante) */
+@media (min-width: 768px) {
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .scroll-btn.left {
+    left: 0.5rem;
+  }
+
+  .scroll-btn.right {
+    right: 0.5rem;
+  }
+  
+  /* Ocultar padding-bottom para pantallas grandes */
+  .productos-container {
+    padding-bottom: 0;
+  }
 }
 
-.scroll-btn.right {
-  right: 0.5rem;
+/* Estilos para pantallas pequeñas (menos de md) */
+@media (max-width: 767.98px) {
+  .scroll-btn {
+    position: static;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 0.5rem;
+    border-radius: 0.75rem;
+  }
+
+  .productos-container {
+    padding-bottom: 0;
+  }
+
+  .botones-scroll-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
 }
 
+/* Scroll oculto */
 .productos-scroll {
   overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .productos-scroll::-webkit-scrollbar {
-  display: none; /* Chrome, Safari y Opera */
+  display: none;
 }
 
