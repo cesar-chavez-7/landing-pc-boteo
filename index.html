@@ -309,14 +309,12 @@ function updateButtons() {
 }
 
 function scrollLeftFunc() {
-  scrollContainer.scrollBy({ left: -250, behavior: 'smooth' });
+  scrollContainer.scrollBy({ left: -150, behavior: 'smooth' });
 }
 
 function scrollRightFunc() {
-  scrollContainer.scrollBy({ left: 250, behavior: 'smooth' });
+  scrollContainer.scrollBy({ left: 150, behavior: 'smooth' });
 }
-
-
 
 scrollContainer.addEventListener('scroll', updateButtons);
 window.addEventListener('resize', updateButtons);
@@ -324,8 +322,8 @@ window.addEventListener('resize', updateButtons);
 btnLeft.addEventListener('click', scrollLeftFunc);
 btnRight.addEventListener('click', scrollRightFunc);
 
-// Inicial
 updateButtons();
+
 </script>
 
 
