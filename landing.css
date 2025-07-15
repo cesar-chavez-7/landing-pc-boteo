@@ -65,7 +65,7 @@
 .card {
   flex: 0 0 auto;
   width: 15rem; /* 240px */
-  border-radius: 0.5rem; /* 8px */
+  border-radius: 0.6rem; /* 8px */
   overflow: hidden;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px 8px */
   scroll-snap-align: start;
@@ -73,11 +73,9 @@
   transition: transform 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-0.3125rem); /* -5px */
-}
 
-.card-img {
+
+.img-card {
   width: 100%;
   height: 13rem; /* 176px */
   object-fit: cover;
