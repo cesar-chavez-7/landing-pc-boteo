@@ -1,10 +1,17 @@
 :root{
 
     --primary-color: #3a7bd6;
-    --secondary-color: #e7eaea;
+    --secondary-color: #f6f6f6;
+    --terciary-color: #f6f6f6;
 
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Utilidades modificadas de bootstrap inicia */
 .btn-primary{
     background-color: var(--primary-color) !important;
 }
@@ -15,6 +22,10 @@
 
 .bg-secondary{
     background-color: var(--secondary-color) !important;
+}
+
+.bg-terciary{
+    background-color: var(--terciary-color) !important;
 }
 
 .text-primary{
@@ -30,13 +41,17 @@
     object-fit: cover;
     object-position: center;
 }
+/* Utilidades modificadas de bootstrap finaliza */
 
+/* Codigo para seccion hero inicia */
 .hero{
     height: 39rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
+/* Codigo para seccion hero finaliza */
+
 
 .productos-grid {
   display: grid;
@@ -64,43 +79,40 @@
 
 .card {
   flex: 0 0 auto;
-  width: 15rem; /* 240px */
-  border-radius: 0.6rem; /* 8px */
+  width: 15rem;
+  border-radius: 0.6rem;
   overflow: hidden;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px 8px */
   scroll-snap-align: start;
-  background: #fff; 
+  background: #fff;
   transition: transform 0.3s ease;
 }
 
 .img-card {
   width: 100%;
-  height: 13rem; /* 176px */
+  height: 13rem;
   object-fit: cover;
 }
 
 .card-body {
-  padding: 1rem; /* 16px */
-  border-top: 1px solid rgba(0, 0, 0, 0.1); /* más visible en blanco */
-  height: 9rem; /* 144px */
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  height: 9rem;
   overflow: hidden;
 }
 
-/* etiquetas */
 .product-label {
-  font-size: 0.8rem; /* 12.8px */
+  font-size: 0.8rem;
 }
 
 .card-title-size {
-  font-size: 1rem; /* 16px */
-  margin-bottom: 0.5rem; /* 8px, simulando .card-title de bootstrap */
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
 }
 
 .productos-container {
   position: relative;
-  padding-bottom: 3.5rem; /* espacio para botones abajo en móvil */
 }
 
 .scroll-btn {
@@ -116,62 +128,32 @@
   justify-content: center;
   transition: background 0.3s, color 0.3s;
   z-index: 10;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-/* Botones deshabilitados */
+.scroll-btn.left {
+  left: 0.5rem;
+}
+
+.scroll-btn.right {
+  right: 0.5rem;
+}
+
 .scroll-btn:disabled {
   background: #aaa;
   color: #eee;
   cursor: default;
 }
 
-/* Estilos para pantallas grandes (md en adelante) */
-@media (min-width: 768px) {
-  .scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .scroll-btn.left {
-    left: 0.5rem;
-  }
-
-  .scroll-btn.right {
-    right: 0.5rem;
-  }
-  
-  /* Ocultar padding-bottom para pantallas grandes */
-  .productos-container {
-    padding-bottom: 0;
-  }
-}
-
-/* Estilos para pantallas pequeñas (menos de md) */
-@media (max-width: 767.98px) {
-  .scroll-btn {
-    position: static;
-    width: 3rem;
-    height: 3rem;
-    margin: 0 0.5rem;
-    border-radius: 0.75rem;
-  }
-
-  .productos-container {
-    padding-bottom: 0;
-  }
-
-  .botones-scroll-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-}
-
-/* Scroll oculto */
 .productos-scroll {
+  display: flex;
+  gap: 1rem;
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 2rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -179,4 +161,3 @@
 .productos-scroll::-webkit-scrollbar {
   display: none;
 }
-
