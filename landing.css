@@ -161,3 +161,42 @@ body {
 .productos-scroll::-webkit-scrollbar {
   display: none;
 }
+
+
+
+/* Opcional: controla que la imagen no crezca demasiado */
+.img-limitada {
+  max-height: 15rem; /* Ajustá según el alto de tu contenido */
+  width: auto;
+  object-fit: cover;
+}
+
+
+.card-value {
+  background-color: #ffffff;
+  border-radius: .5rem;
+  box-shadow: 
+    0 1px 4px rgba(255, 255, 255, 0.1),  /* luz blanca más suave */
+    0 2px 8px rgba(0, 0, 0, 0.2);        /* sombra negra más ligera */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 250px;
+}
+
+.card-value:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 4px 20px rgba(255, 255, 255, 0.4),
+    0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.valor-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.img-valor {
+  height: 80px;
+  object-fit: contain;
+}
+
+
