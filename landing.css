@@ -52,7 +52,7 @@ body {
 }
 /* Codigo para seccion hero finaliza */
 
-
+/* Productos Seccion Home Inicia */
 .productos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr)); /* 220px */
@@ -111,7 +111,7 @@ body {
   line-height: 1.2;
 }
 
-.productos-container {
+.product-container {
   position: relative;
 }
 
@@ -148,7 +148,7 @@ body {
   cursor: default;
 }
 
-.productos-scroll {
+.product-scroll {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
@@ -158,9 +158,11 @@ body {
   -ms-overflow-style: none;
 }
 
-.productos-scroll::-webkit-scrollbar {
+.product-scroll::-webkit-scrollbar {
   display: none;
 }
+
+/* Productos Seccion Home Finaliza */
 
 
 
